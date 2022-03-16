@@ -1,0 +1,210 @@
+/*----------------------------------------------------- */
+/*------------------------ basic seup------------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #fff;
+	color: #555;
+	font-family: "lato", "arial", sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+}
+/*----------------------------------------------------- */
+/*------------------------ head image------------------- */
+
+header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.363)),
+		url(images/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+
+section {
+	padding: 50px 0;
+}
+/*----------------------------------------------------- */
+/*------------------------ reusable code -------------- */
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.hero-text-box {
+	position: absolute;
+	width: auto;
+	top: 50%;
+	left: 50%;
+	/* this property translate the half of its width and half feom left  */
+	transform: translate(-50%, -50%);
+}
+.box {
+	padding-top: 11px;
+}
+
+/*----------------------------------------------------- */
+/*------------------------ heading ------------------- */
+
+/*  give margin 0 h1 beacuse of normalize css  it give padding and margin to all element */
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+h1 {
+	display: inline-block;
+	margin-top: 0;
+	font-size: 240%;
+	font-weight: 40;
+	color: #fff;
+	text-transform: uppercase;
+	word-spacing: 4px;
+}
+h2 {
+	font-weight: 40;
+
+	word-spacing: 2px;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 180%;
+	margin-bottom: 30px;
+}
+h3 {
+	font-size: 110%;
+	margin-bottom: 15px;
+}
+/* after for only that orange line  */
+h2::after {
+	display: block;
+	content: "";
+	width: 100px;
+	height: 2px;
+	background-color: rgb(240, 111, 64);
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo {
+	height: 120px;
+	width: auto;
+	margin-top: 15px;
+	float: left;
+}
+.main-nav {
+	float: right;
+	list-style: none;
+	margin-top: 20px;
+}
+.main-nav li {
+	display: inline-block;
+	margin-left: 30px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+	padding: 5px 0 5px 0;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 90%;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.2s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+	border-bottom: 2px solid rgba(248, 118, 70, 0.918);
+	color: rgb(88, 210, 226);
+}
+/*---------------paragraph-------------- */
+.long-copy {
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%;
+}
+.box p {
+	font-size: 80%;
+	line-height: 145%;
+}
+/*----------------------------------------------------- */
+/*------------------------ btn------------------------- */
+
+/* btn for i mh hungry  */
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	text-decoration: none;
+	border: 2px solid;
+	border-radius: 20px;
+	border-color: rgb(247, 108, 28);
+	padding: 10px 25px;
+	margin-left: 10px;
+	font-weight: 300;
+	color: rgb(228, 225, 235);
+	transition: background-color 1s, border 1s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+	background-color: rgb(226, 91, 42);
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+	color: rgb(226, 85, 42);
+}
+.btn:hover,
+.btn:active {
+	background-color: rgb(241, 75, 14);
+	color: #fff;
+}
+
+/*----------------------------------------------------- */
+/*------------------------ logo ------------------------- */
+.col ion-icon {
+	font-size: 300%;
+	display: block;
+	color: rgb(226, 91, 42);
+	margin-bottom: 10px;
+}
+
+/*----------------------------------------------------- */
+/*------------------------ mealpics ------------------------- */
+
+.section-meals {
+	padding: 0;
+}
+.meal-showcase {
+	list-style: none;
+	width: 100%;
+}
+.meal-showcase li {
+	display: block;
+	float: left;
+	width: 25%;
+}
+.meal-photo {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+.meal-photo img {
+	width: 100%;
+	height: auto;
+	transform: scale(1.15);
+	opacity: 0.9;
+	transition: transform 0.5s opacity(0.8s);
+}
+
+.meal-photo img:hover {
+	opacity: 1;
+	transform: scale(1.04);
+}
